@@ -140,6 +140,7 @@ void AChristmasJam2021Character::SetupPlayerInputComponent(class UInputComponent
 
 void AChristmasJam2021Character::OnFire()
 {
+	return;
 	// try and fire a projectile
 	if (ProjectileClass != nullptr)
 	{
