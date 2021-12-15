@@ -20,8 +20,6 @@ class AChristmasJam2021Character : public ACharacter
 	GENERATED_BODY()
 
 	/** Pawn mesh: 1st person view (arms; seen only by self) */
-	UPROPERTY(VisibleDefaultsOnly, Category=Mesh)
-	USkeletalMeshComponent* Mesh1P;
 
 	/** Gun mesh: 1st person view (seen only by self) */
 	UPROPERTY(VisibleDefaultsOnly, Category = Mesh)
@@ -53,6 +51,9 @@ class AChristmasJam2021Character : public ACharacter
 
 public:
 	AChristmasJam2021Character();
+	
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category=Mesh)
+	USkeletalMeshComponent* Mesh1P;
 
 protected:
 	virtual void BeginPlay();
